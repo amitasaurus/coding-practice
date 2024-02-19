@@ -22,7 +22,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/Tabs';
 // import './utils/bfs';
 // import './utils/dfs';
 // import './utils/queue';
-import './utils/classNames';
+// import './utils/classNames';
+import maskify from './utils/maskify';
 
 function App() {
   useEffect(() => {
@@ -56,6 +57,8 @@ function App() {
     }, 500);
     debounceFn();
     */
+    /** Maskify Solution */
+    // console.log(maskify('4556364607935616'));
   }, []);
   return (
     <>
