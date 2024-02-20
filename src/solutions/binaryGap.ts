@@ -14,3 +14,4 @@ export default function binaryGap(N: number): number {
   const binaryGap = `1${new Array(longestSequence).fill(0).join('')}1`;
   return binaryString.includes(binaryGap) ? longestSequence : 0;
 }
+// binaryGap(529); //15,20

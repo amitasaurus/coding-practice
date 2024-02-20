@@ -19,3 +19,4 @@ export default function binarySearch(
 
   return -1;
 }
+// binarySearch([1, 2, 3, 10, 11, 20], 20)

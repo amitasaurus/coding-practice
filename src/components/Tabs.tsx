@@ -63,3 +63,20 @@ export function TabsContent({ value, className, children }: ITabProps) {
   if (activeTab !== value) return null;
   return <div className={clsx('p-2 py-4 h-full', className)}>{children}</div>;
 }
+
+/**
+ <div className="flex items-center justify-center w-screen h-screen bg-slate-100">
+    <div className="border border-dashed border-slate-300 w-[500px] h-[500px]">
+      <Tabs defaultValue="html">
+        <TabsList>
+          <TabsTrigger value="html">HTML</TabsTrigger>
+          <TabsTrigger value="css">CSS</TabsTrigger>
+          <TabsTrigger value="js">JavaScript</TabsTrigger>
+        </TabsList>
+        <TabsContent value="html">This is HTML Tab Content</TabsContent>
+        <TabsContent value="css">This is CSS Tab Content</TabsContent>
+        <TabsContent value="js">This is JS Tab Content</TabsContent>
+      </Tabs>
+    </div>
+  </div>
+ */

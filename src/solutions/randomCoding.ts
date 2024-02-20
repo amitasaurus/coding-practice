@@ -13,3 +13,5 @@ export function PermMissingElem(A: number[]): number {
   }
   return missingElem;
 }
+// console.log('FrogJmp', FrogJmp(10, 85, 30));
+// console.log('PermMissingElem', PermMissingElem([]));

@@ -13,3 +13,5 @@ export default function HolyGrail({ children }: Props) {
     </div>
   );
 }
+
+// <HolyGrail>Page's Main Content</HolyGrail>

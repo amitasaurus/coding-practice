@@ -14,3 +14,5 @@ export default function countBy<T>(
   }
   return aggregateObject;
 }
+// countBy([6.1, 4.2, 6.3], Math.floor)
+// countBy(['one', 'two', 'three'], 'length')

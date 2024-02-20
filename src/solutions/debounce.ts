@@ -8,3 +8,9 @@ export default function debounce(func: Function, wait: number): Function {
     }, wait);
   };
 }
+/**
+ const debounceFn = debounce(() => {
+    console.log('Called after delay');
+  }, 500);
+  debounceFn();
+ */
