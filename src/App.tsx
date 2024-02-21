@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import './solutions/event-emitter';
+import './solutions/backbone-model';
 
 function App() {
   useEffect(() => {}, []);
