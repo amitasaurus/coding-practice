@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import './solutions/data-selection';
+import './solutions/event-emitter';
 
 function App() {
   useEffect(() => {}, []);
