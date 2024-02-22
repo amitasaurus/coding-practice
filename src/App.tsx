@@ -1,10 +1,14 @@
 import { useEffect } from 'react';
 import './App.css';
-import './solutions/backbone-model';
+import TransferListPage from './pages/transfer-list';
 
 function App() {
   useEffect(() => {}, []);
-  return <></>;
+  return (
+    <>
+      <TransferListPage />
+    </>
+  );
 }
 
 export default App;
