@@ -16,6 +16,24 @@ export default function TransferList({}: Props) {
   const [itemsRight, setItemsRight] = useState<Array<string>>(defaultListRight);
   const selectedItemsLeft: string[] = [];
   const selectedItemsRight: string[] = [];
+
+  function handleListAddition(
+    event: React.FormEvent<HTMLFormElement>,
+    action: string
+  ) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const fieldName = action;
+    const value = formData.get(fieldName);
+    const itemsClone =
+      fieldName === 'leftInput' ? [...itemsLeft] : [...itemsRight];
+    itemsClone.push(value as string);
+    fieldName === 'leftInput'
+      ? setItemsLeft(itemsClone)
+      : setItemsRight(itemsClone);
+    formData.set(fieldName, '');
+  }
+
   function handleCheckboxClick(
     event: React.ChangeEvent<HTMLInputElement>,
     list: string
@@ -69,6 +87,19 @@ export default function TransferList({}: Props) {
     <div className="grid w-1/2 grid-cols-12 p-4 bg-white rounded shadow-sm">
       <div className="flex justify-center col-span-5 border-r border-slate-600">
         <div>
+          <form
+            className="mb-4"
+            onSubmit={(e) => handleListAddition(e, 'leftInput')}
+          >
+            <input
+              className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="leftInput"
+              name="leftInput"
+              type="text"
+              placeholder="Type & hit enter"
+            />
+          </form>
+
           {itemsLeft.map((e) => (
             <div className="flex items-center justify-start mb-2" key={e}>
               <input
@@ -116,6 +147,18 @@ export default function TransferList({}: Props) {
       </div>
       <div className="flex justify-center col-span-5 border-l border-slate-600">
         <div>
+          <form
+            className="mb-4"
+            onSubmit={(e) => handleListAddition(e, 'rightInput')}
+          >
+            <input
+              className="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="rightInput"
+              name="rightInput"
+              type="text"
+              placeholder="Type & hit enter"
+            />
+          </form>
           {itemsRight.map((e) => (
             <div className="flex items-center justify-start mb-2" key={e}>
               <input
