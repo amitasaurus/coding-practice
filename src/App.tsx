@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import './App.css';
-import TransferListPage from './pages/transfer-list';
+import UCounterPage from './pages/undoable-counter';
 
 function App() {
   useEffect(() => {}, []);
   return (
     <>
-      <TransferListPage />
+      <UCounterPage />
     </>
   );
 }
